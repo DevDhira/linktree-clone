@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/',include('djoser.urls')),
     path('auth/',include('djoser.urls.authtoken')),
-    path('api/',include('app.urls')),
+    path('',include('app.urls')),
     path('r/<str:unique_string>/', GroupLinksPublicAPIView.as_view(), name='public-link-group')
 ]
